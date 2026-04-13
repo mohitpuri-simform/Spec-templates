@@ -1,4 +1,4 @@
-# Spec Templates Overview
+# Spec Templates
 
 This repository contains product specification templates for core account-related features.
 
