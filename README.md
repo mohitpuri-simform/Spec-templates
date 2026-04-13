@@ -1,4 +1,4 @@
-# Spec Templates Overview
+# Spec Templates
 
 This repository contains product specification templates for core account-related features.
 
@@ -93,5 +93,12 @@ Covers profile viewing and editing with API-driven save behavior.
 
 ## 3) SSO Authentication Feature
 
-- `SSO-auth-template.md` currently exists but has no defined content.
-- SSO requirements, user stories, and acceptance criteria are pending.
+- `SSO-auth-template.md` contains a draft specification for a generic frontend-only SSO flow.
+- Highlights from the SSO template:
+  - Frontend exposes an SSO login button that redirects the browser to the configured SSO API endpoint.
+  - The application must call the Profile API as the first API request on startup to verify session state.
+  - If the Profile API succeeds, navigate to the authenticated route (e.g., `/` or `/home`); if it fails, redirect to the login page.
+  - Supports optional payload parameters when triggering SSO (examples: `rememberMe`, `tenantId`).
+  - Success criteria include: SSO trigger works, profile verification succeeds, and conditional navigation behaves correctly.
+
+See `SSO-auth-template.md` for full user stories, requirements, edge cases, and success criteria.
